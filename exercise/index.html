@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<style type="text/css">
+		.box{
+			width:200px;
+			height:180px;
+			margin:100px auto;
+			
+			transform-style:preserver-3d;
+			transform:perspective(800px) rotate(0deg);
+		}
+		.pic{
+			tranform-style:perspective-3d;
+			transform:perspective(800px) rotate(0deg);
+			transition:all 2s ease;
+		}
+		.pic,.info{
+			width:200px;
+			hright:180px;
+			position:absolute;
+			top:0;
+			left:0;
+			backface-visibility:hidden;
+			
+		}
+		.info{
+			
+			background-color:yellow;
+			tranform-style:perspective-3d;
+			transform:perspective(800px) rotateY(180deg);
+			transition:all 2s ease;
+		}
+		.box:hover .pic{
+			transform:perspective(800px) rotateY(180deg);
+		}
+		.box:hover .info{
+			transform:perspective(800px) rotateY(0deg);
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img class="pic" src='1.jpg'>
+		<div class="info">1234567</div>
+	</div>
+</body>
+</html>
